@@ -10,12 +10,9 @@ if __name__ == "__main__":
     dataProveedores={'data':[]}
     dataCompras={'data':[]}
     dataVentas={'data':[]}
-    diCli = {
-        "code":"002",
-        "name":"Pepito Perez"
-    }
-    print(clientes.createData())
-    clientes.createData("clientes.json",dataClientes,diCli)
+   
+    
+    clientes.mainMenu()
     # productos.createData("productos.json",dataProductos)
     # proveedores.createData("proveedores.json",dataProveedores)
     # compras.createData("compras.json",dataCompras)
