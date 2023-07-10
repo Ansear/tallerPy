@@ -1,14 +1,15 @@
 import os
 import producto
 import proveedor
+import compra
 if __name__ == "__main__":
-    os.system("cls")
+    os.system("clear")
     proveedores = {}
     compras  = []
     ventas = []
     pro = True
     while pro: 
-        os.system("cls")
+        os.system("clear")
         print("1.Agregar proveedores y productos")
         print("2.Comprar productos")
         print("3.Vender productos") 
@@ -25,9 +26,13 @@ if __name__ == "__main__":
             elif(op == 2):
                 producto.addProduct(proveedores)
         elif(op == 2):
-            pass
+            compra.showProducts(proveedores)
+            if(len(proveedores) >= 1):
+                print("Ingrese el nombre del producto a comprar: ")
+                nom = input(": ")
+                compra.newCompra(nom, proveedores, compras)
         elif(op == 3):
-            producto.showProducts(proveedores)
+            producto.purchases(proveedores)            
         elif(op == 4):
             print(compras)
 
